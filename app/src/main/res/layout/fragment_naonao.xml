@@ -6,7 +6,7 @@
     >
 
     <RelativeLayout
-        android:id="@+id/headlayout"
+        android:id="@+id/home_headlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/red"
@@ -24,16 +24,9 @@
             android:id="@+id/headMore"
             android:layout_width="30dp"
             android:layout_height="26dp"
-            android:src="@mipmap/jiahao"
+            android:src="@mipmap/mall_camera0"
             android:layout_alignParentRight="true"
             android:layout_margin="10dp"
-            />
-        <ImageView
-            android:id="@+id/headLingdang"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@mipmap/home_lingdang"
-            android:layout_toLeftOf="@+id/headMore"
             />
 
         <TextView
@@ -41,9 +34,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
-            android:text="@string/hometitle"
+            android:text="@string/homenaonao"
             android:textSize="22sp"
-            android:drawableRight="@mipmap/main_title_right"
             android:layout_centerInParent="true"/>
     </RelativeLayout>
 

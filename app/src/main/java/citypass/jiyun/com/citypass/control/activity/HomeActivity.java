@@ -3,11 +3,9 @@ package citypass.jiyun.com.citypass.control.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -15,7 +13,8 @@ import butterknife.OnClick;
 import citypass.jiyun.com.citypass.R;
 import citypass.jiyun.com.citypass.control.base.BaseActivity;
 import citypass.jiyun.com.citypass.control.fragment.head.HeadFragment;
-import citypass.jiyun.com.citypass.control.tools.FragmentUtils;
+import citypass.jiyun.com.citypass.control.fragment.naonao.NaonaoFragment;
+import citypass.jiyun.com.citypass.control.tools.FragmentBuilder;
 
 public class HomeActivity extends BaseActivity {
 
@@ -43,7 +42,7 @@ public class HomeActivity extends BaseActivity {
 
     @Override
     public void initData() {
-        FragmentUtils.addFragment(getSupportFragmentManager(), new HeadFragment(),R.id.home_framelayout);
+        FragmentBuilder.getInstance().start(R.id.home_framelayout,HeadFragment.class);
     }
 
     @Override
@@ -67,8 +66,10 @@ public class HomeActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.home_headbut:
+                FragmentBuilder.getInstance().start(R.id.home_framelayout,HeadFragment.class);
                 break;
             case R.id.home_naobut:
+                FragmentBuilder.getInstance().start(R.id.home_framelayout,NaonaoFragment.class);
                 break;
             case R.id.home_locationbut:
                 break;
